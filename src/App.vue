@@ -4,6 +4,8 @@
       <v-app-bar-title>
         Ethics of AI
       </v-app-bar-title>
+      <v-spacer/>
+      <g-metrics/>
     </v-app-bar>
     <v-main>
 
@@ -13,5 +15,7 @@
 </template>
 
 <script setup lang="ts">
+import GMetrics from './components/GMetrics.vue';
+
 
 </script>
