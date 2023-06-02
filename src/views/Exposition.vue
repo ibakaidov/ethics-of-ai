@@ -15,23 +15,25 @@
 
           <v-card-text>
             <v-radio-group v-model="answerId" row>
-              <v-radio v-for="(answer, i) of story.upshot.answers"  :label="answer.text" :value="i" ></v-radio>
+              <v-radio
+                v-for="(answer, i) of story.upshot.answers"
+                :label="answer.text"
+                :value="i"
+              ></v-radio>
             </v-radio-group>
           </v-card-text>
         </v-card>
       </v-col>
     </v-row>
-    <v-row v-if="answerId!=undefined">
-        <v-col>
-            <v-card>
-                <v-card-actions>
-                    <v-spacer></v-spacer>
-                    <v-btn @click="save()">
-                        Принять решение!
-                    </v-btn>
-                </v-card-actions>
-            </v-card>
-        </v-col>
+    <v-row v-if="answerId != undefined">
+      <v-col>
+        <v-card>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn @click="save()"> Принять решение! </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -46,7 +48,7 @@ import { ref } from "vue";
 
 import { useAnswersStore } from "@/store/answers";
 
-const router = useRouter()
+const router = useRouter();
 const route = useRoute();
 const answersStore = useAnswersStore();
 
@@ -58,10 +60,10 @@ const story = computed(() => {
   return stories[id];
 });
 
-
 function save() {
-    if(answerId.value)
+  if (answerId.value != undefined) {
     answersStore.save(id, answerId.value);
-    router.push(story.value.to)
+    router.push(story.value.to);
+  }
 }
 </script>

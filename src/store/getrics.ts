@@ -11,5 +11,13 @@ export const useGetricsStore = defineStore('getrics', {
         loyalty: 0,
         pragmatism: 0,  
         altruism: 0
-    })
+    }),
+
+    actions:{
+        apply(effect: Getric){
+            this.loyalty+=effect.loyalty
+            this.pragmatism = effect.pragmatism
+            this.altruism = effect.altruism
+        }
+    }
 })
