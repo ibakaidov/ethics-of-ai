@@ -1,0 +1,25 @@
+import { Getric } from "@/store/getrics"
+
+export interface AdditionalFact{
+    text: string,
+    cost: number,
+    currency: keyof Getric
+}
+
+export interface Answer {
+    text: string,
+    upshot: string,
+    effect: {[key in keyof Getric]: number}
+}
+
+export interface Story {
+    exposition: {
+        description: string,
+        additionalFacts: AdditionalFact[]
+    },
+    upshot:{
+        answers: Answer[]
+    },
+    to: string
+}
+

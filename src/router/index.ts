@@ -4,17 +4,23 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    component: () => import('@/layouts/default/Default.vue'),
-    children: [
-      {
-        path: '',
-        name: 'Home',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
-      },
-    ],
+    component: () => import('@/views/Home.vue'),
+  },
+  {
+    path: '/instruction',
+    component: () => import('@/views/Instruction.vue'),
+  },
+  {
+    path: '/gargetChoose',
+    component: () => import('@/views/GargetChoose.vue'),
+  },
+  {
+    path: '/exposition/:id',
+    component: () => import('@/views/Exposition.vue'),
+  },
+  {
+    path: '/upshot/:id',
+    component: () => import('@/views/Upshot.vue'),
   },
 ]
 

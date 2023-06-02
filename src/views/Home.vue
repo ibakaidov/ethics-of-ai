@@ -25,7 +25,7 @@
       </v-card-text>
       <v-card-actions>
         <v-spacer/>   
-        <v-btn flat color="primary">Смириться</v-btn>
+        <v-btn flat color="primary" to="/instruction">Смириться</v-btn>
       </v-card-actions>
     </v-card>
   </v-container>
