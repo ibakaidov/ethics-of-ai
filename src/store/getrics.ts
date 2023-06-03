@@ -6,6 +6,12 @@ export interface Getric{
     altruism: number
 }
 
+export const getricIcons:{[key in keyof Getric]: string} = {
+    pragmatism: 'mdi-cash',
+    loyalty: 'mdi-pen',
+    altruism: 'mdi-nature-people'
+}
+
 export const useGetricsStore = defineStore('getrics', {
     state: ()=>({
         loyalty: 0,

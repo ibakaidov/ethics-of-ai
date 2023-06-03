@@ -15,24 +15,41 @@
       </v-card-text>
       <v-card-text>
         <v-container>
-            <v-row>
-                <v-col>Прибыльность</v-col>
-                <v-col>Лояльность</v-col>
-                <v-col>Альтруистичность</v-col>
-            </v-row>
-            <v-row>
-                <v-col>
-                    <v-btn disabled rounded block prepend-icon="mdi-cash">0</v-btn>
-                </v-col>
-                <v-col>
-                    <v-btn disabled rounded block prepend-icon="mdi-pen">0</v-btn>
-                </v-col>
-                <v-col>
-                    <v-btn disabled rounded block prepend-icon="mdi-nature-people">0</v-btn>
-                </v-col>
-            </v-row>
+          <v-row>
+            <v-col>Прибыльность</v-col>
+            <v-col>Лояльность</v-col>
+            <v-col>Альтруистичность</v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <v-btn
+                disabled
+                rounded
+                block
+                :prepend-icon="getricIcons.pragmatism"
+                >{{ getricsStore.pragmatism }}</v-btn
+              >
+            </v-col>
+            <v-col>
+              <v-btn
+                disabled
+                rounded
+                block
+                :prepend-icon="getricIcons.loyalty"
+                >{{ getricIcons.loyalty }}</v-btn
+              >
+            </v-col>
+            <v-col>
+              <v-btn
+                disabled
+                rounded
+                block
+                :prepend-icon="getricIcons.altruism"
+                >{{ getricIcons.altruism }}</v-btn
+              >
+            </v-col>
+          </v-row>
         </v-container>
-
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
@@ -41,3 +58,9 @@
     </v-card>
   </v-container>
 </template>
+
+<script setup lang="ts">
+import { getricIcons, useGetricsStore } from "@/store/getrics";
+
+const getricsStore = useGetricsStore();
+</script>

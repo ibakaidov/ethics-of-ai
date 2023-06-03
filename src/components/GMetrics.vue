@@ -3,25 +3,25 @@
     
     <v-btn class="text-none" stacked>
       <v-badge :content="pragmatism" :color="pragmatismColor">
-        <v-icon>mdi-cash</v-icon>
+        <v-icon :icon="getricIcons.pragmatism"/>
       </v-badge>
     </v-btn>
     <v-btn class="text-none" stacked>
       <v-badge :content="loyalty" :color="loyaltyColor">
-        <v-icon>mdi-pen</v-icon>
+        <v-icon :icon="getricIcons.loyalty"/>
       </v-badge>
     </v-btn>
 
     <v-btn class="text-none" stacked>
       <v-badge :content="altruism" :color="altruismColor">
-        <v-icon>mdi-nature-people</v-icon>
+        <v-icon :icon="getricIcons.altruism"/>
       </v-badge>
     </v-btn>
   </section>
 </template>
 
 <script setup lang="ts">
-import { useGetricsStore } from '@/store/getrics';
+import { getricIcons, useGetricsStore } from '@/store/getrics';
 import { ComputedRef } from 'vue';
 import { ref } from 'vue';
 import { computed } from 'vue';
