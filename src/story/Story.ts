@@ -16,10 +16,11 @@ export interface Story {
     exposition: {
         description: string,
         additionalFacts: AdditionalFact[]
+        to: string
     },
     upshot:{
         answers: Answer[]
+        to: string
     },
-    to: string
 }
 

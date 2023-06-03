@@ -18,6 +18,9 @@ export const useGetricsStore = defineStore('getrics', {
             this.loyalty+=effect.loyalty
             this.pragmatism = effect.pragmatism
             this.altruism = effect.altruism
+        },
+        increment(key: keyof Getric, value: number){
+            this[key]+=value
         }
     }
 })

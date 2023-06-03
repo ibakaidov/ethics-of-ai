@@ -63,7 +63,7 @@ const story = computed(() => {
 function save() {
   if (answerId.value != undefined) {
     answersStore.save(id, answerId.value);
-    router.push(story.value.to);
+    router.push(story.value.exposition.to);
   }
 }
 </script>

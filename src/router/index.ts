@@ -22,6 +22,11 @@ const routes = [
     path: '/upshot/:id',
     component: () => import('@/views/Upshot.vue'),
   },
+  {
+    path: '/plot/:id',
+    component: () => import('@/views/Plot.vue'),
+
+  }
 ]
 
 const router = createRouter({
