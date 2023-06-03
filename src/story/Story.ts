@@ -13,6 +13,7 @@ export interface Answer {
 }
 
 export interface Story {
+    title: string,
     exposition: {
         description: string,
         additionalFacts: AdditionalFact[]

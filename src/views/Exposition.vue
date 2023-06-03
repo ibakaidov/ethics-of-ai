@@ -3,9 +3,9 @@
     <v-row>
       <v-col>
         <v-card>
-          <v-card-title>Ситуация</v-card-title>
+          <v-card-title>Ситуация: "{{ story.title }}"</v-card-title>
           <v-card-text>
-            {{ story.exposition.description }}
+            <text-with-additional-facts :text="story.exposition.description" :additional-facts="story.exposition.additionalFacts"/>
           </v-card-text>
         </v-card>
       </v-col>
@@ -47,6 +47,7 @@ import { Answer } from "@/story//Story";
 import { ref } from "vue";
 
 import { useAnswersStore } from "@/store/answers";
+import TextWithAdditionalFacts from "@/components/TextWithAdditionalFacts.vue";
 
 const router = useRouter();
 const route = useRoute();

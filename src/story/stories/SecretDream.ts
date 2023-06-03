@@ -3,6 +3,7 @@ import { Story } from "../Story";
 
 
 export const secretDreamStory: Story = {
+    title: 'SecretDream',
     exposition: {
         description: 'Компанией Ухундекс была разработана нейросеть SecretDream, которая генерирует  видео контент порнографического содержания по заданному описанию. Сервис может воплощать любые фантазии пользователя в жизнь. Как вы поступите?        ',
         additionalFacts: [],
