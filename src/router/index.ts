@@ -16,6 +16,10 @@ const routes = [
     component: () => import('@/views/GameOver.vue'),
   },
   {
+    path: '/final',
+    component: () => import('@/views/Final.vue'),
+  },
+  {
     path: '/gargetChoose',
     component: () => import('@/views/GargetChoose.vue'),
   },
