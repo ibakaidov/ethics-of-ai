@@ -1,5 +1,16 @@
 <template>
   <v-container grid-list-xs>
+    
+    <v-row v-if="answerId != undefined">
+      <v-col>
+        <v-card>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn @click="save()"> Принять решение! </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
     <v-row>
       <v-col>
         <v-card>
@@ -14,24 +25,18 @@
           <v-card-title>Варианты действий</v-card-title>
 
           <v-card-text>
-            <v-radio-group v-model="answerId" row>
-              <v-radio
+              <v-card small
                 v-for="(answer, i) of story.upshot.answers"
-                :label="answer.text"
-                :value="i"
-              ></v-radio>
-            </v-radio-group>
+                :color="answerId==i?'success': ''"
+              >
+                <v-card-text>
+                    {{ answer.text }}
+                </v-card-text>
+                <v-card-actions>
+                    <v-btn :disabled="answerId==i" @click="answerId=i">Выбрать</v-btn>
+                </v-card-actions>
+            </v-card>
           </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-    <v-row v-if="answerId != undefined">
-      <v-col>
-        <v-card>
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn @click="save()"> Принять решение! </v-btn>
-          </v-card-actions>
         </v-card>
       </v-col>
     </v-row>

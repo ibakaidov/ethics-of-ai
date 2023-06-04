@@ -11,7 +11,7 @@ export const studentStory: Story = {
             currency: 'altruism',
             cost: 1
         }],
-        to: '/upshot/2'
+        to: '/upshot/3'
     },
     upshot: {
         to: '/final',
