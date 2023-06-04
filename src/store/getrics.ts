@@ -14,9 +14,9 @@ export const getricIcons:{[key in keyof Getric]: string} = {
 
 export const useGetricsStore = defineStore('getrics', {
     state: ()=>({
-        loyalty: 0,
-        pragmatism: 0,  
-        altruism: 0
+        loyalty: 1,
+        pragmatism: 1,  
+        altruism: 1
     }),
 
     actions:{

@@ -3,12 +3,16 @@
     
     <v-card>
         <v-card-title primary-title>
-            Результат решения проблемы
+            Результат решения проблемы {{ story.title }}
         </v-card-title>
 
         <v-card-text>
             {{ answer.upshot }}
         </v-card-text>
+        <v-card-actions>
+            <v-spacer/>
+            <v-btn color="success" :to="story.upshot.to">text</v-btn>
+        </v-card-actions>
     </v-card>
     </v-container>
 </template>
@@ -22,6 +26,7 @@ const route = useRoute();
 const answersStore = useAnswersStore();
 const getricsStore = useGetricsStore();
 const sid = +route.params.id;
+const story = stories[sid]
 
 const id = answersStore.answers.get(sid);
 const answer = stories[sid].upshot.answers[id??0]

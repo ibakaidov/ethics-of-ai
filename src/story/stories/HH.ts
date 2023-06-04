@@ -10,7 +10,7 @@ export const hHStory: Story = {
             {
                 text:'Грефбанк',
                 cost: 1,
-                currency: 'loyalty'
+                currency: 'pragmatism'
             }
         ]
     },
