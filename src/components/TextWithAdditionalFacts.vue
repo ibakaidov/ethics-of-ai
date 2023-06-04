@@ -22,6 +22,7 @@ const { text, additionalFacts } = defineProps<{
 const exp = /\$[0-9]/g;
 const tparts = text.split(exp);
 const fparts = text.match(exp);
+
 const parts = ref<
   (
     | {
@@ -49,5 +50,10 @@ if (fparts)
         fact: fpart,
       });
     }
+  } else{
+    parts.value.push({
+        isText: true,
+        text
+    })
   }
 </script>

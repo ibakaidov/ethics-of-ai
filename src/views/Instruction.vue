@@ -36,7 +36,7 @@
                 rounded
                 block
                 :prepend-icon="getricIcons.loyalty"
-                >{{ getricIcons.loyalty }}</v-btn
+                >{{ getricsStore.loyalty }}</v-btn
               >
             </v-col>
             <v-col>
@@ -45,7 +45,7 @@
                 rounded
                 block
                 :prepend-icon="getricIcons.altruism"
-                >{{ getricIcons.altruism }}</v-btn
+                >{{ getricsStore.altruism }}</v-btn
               >
             </v-col>
           </v-row>
