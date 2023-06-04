@@ -1,4 +1,5 @@
 // Composables
+import { useGetricsStore } from '@/store/getrics'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
@@ -9,6 +10,10 @@ const routes = [
   {
     path: '/instruction',
     component: () => import('@/views/Instruction.vue'),
+  },
+  {
+    path: '/gameover',
+    component: () => import('@/views/GameOver.vue'),
   },
   {
     path: '/gargetChoose',
@@ -32,6 +37,18 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+
+  
+})
+router.beforeEach((item)=>{
+  console.log(item.path);
+  
+  const getricsStore = useGetricsStore()
+  if(!getricsStore.isPositive&&item.path!='/gameover'){
+    router.push({
+      path: '/gameover'
+    })
+  }
 })
 
 export default router
