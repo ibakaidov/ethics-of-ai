@@ -39,9 +39,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory('/ethics-of-ai/'),
   routes,
-
   
 })
 router.beforeEach((item)=>{
