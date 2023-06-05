@@ -26,8 +26,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
     - run: npm run build 
-      env:
-        BASE_URL: /ethics-of-ai/
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:

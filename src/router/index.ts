@@ -39,7 +39,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/ethics-of-ai/'),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
   
 })
