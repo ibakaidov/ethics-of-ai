@@ -11,7 +11,7 @@
         </v-card-text>
         <v-card-actions>
             <v-spacer/>
-            <v-btn color="success" :to="story.upshot.to">Далее</v-btn>
+            <v-btn color="success" :to="story.upshot.to">Далее  </v-btn>
         </v-card-actions>
     </v-card>
     </v-container>
